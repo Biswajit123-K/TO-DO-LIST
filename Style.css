@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background:linear-gradient(45deg red,blue)
+}
+.container{
+
+    margin: 10% 20% 20% 30%;
+max-width: 500px;
+min-height:150px ;
+background-color: azure;
+border-radius: 10px;
+border: 2px solid greenyellow;
+box-shadow:0px 1px 20px rgb(11, 78, 179) ;
+}
+h2{
+    padding-top: 5px;
+    color: rgb(234, 156, 11);
+    text-align: center;
+    /* justify-content: center; */
+   /* animation: 3s linear 1s infinite alternate slide-in; */
+}
+h2 span img{
+    padding: 7px 0px 0px 8px;
+    /* position:relative; */
+    height: 20px;
+    width: 20px;
+    /* animation: 3s linear 1s infinite alternate slide-in; */
+}
+.header{
+    margin-top: 14px;
+    padding-top: 8px 10px 2px 10px;
+    display: flex;
+    justify-content:space-around;
+    padding-bottom: 5%;
+
+}
+.header input{
+    margin-left: 10%;
+    width: 60%;
+    height: 30px;
+    font-weight:500;
+    background: whitesmoke;
+   /* border: none; */
+    border-radius: 10px;
+    outline: none;
+    color: rgb(2, 2, 36);
+    font-size: 15px;
+    padding-left: 10px;
+}
+.header input:hover{
+    border: 2px solid red;
+}
+.header button{
+    width: 60px;
+    color: white;
+    background: black;
+    border-radius: 8px;
+}
+.header button:hover{
+ background: blue;
+ color: white;
+ cursor: pointer;
+}
+
+
+.body-container{
+    padding: 0% 5%;
+  
+}
+#list-content{
+    padding-left: 10px;
+}
+ul li{
+    list-style-type: none;
+   position: relative;
+    font-size: 25px;
+    letter-spacing: 1px;
+    padding:10px 8px 12px 40px;
+    cursor: pointer;
+    /* border: 1px solid blanchedalmond; */
+    margin-bottom: 5px;
+    user-select: none;
+}
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+   border-radius: 50%;
+    background: url(unchecked.png);
+    background-size: cover;
+    left: 8px;
+    top: 15px;
+  
+}
+ul li.checked{
+    background: blue;
+    color: rgb(240, 233, 233);
+    border-radius: 20px;
+}
+ul li.checked::before{
+    background: #e11212;
+}
+ul li span{
+    position: absolute;
+    right:5px;
+    top: 13px;
+    width: 20px;
+    height: 20px;
+  font-size: 20px;
+  
+    border-radius: 50%;
+    position: center;
+    text-align: center;
+}
+ul li span:hover{
+    background: black;
+    color: red;
+}

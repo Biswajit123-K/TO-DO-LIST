@@ -324,7 +324,7 @@ taskList.addEventListener("click", (e) => {
         // =================================
 
         submitbtn.innerHTML = `
-            <i class="fa-solid fa-pen"></i>
+           
             Update Task
         `;
 

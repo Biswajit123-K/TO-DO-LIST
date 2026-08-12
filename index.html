@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskManagement </title>
+    <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+   <div class="main-container">
+    <div class="side-container">
+        <h1 class="heading"><span><i class="fa-regular fa-square-check"></i></span>Task<span>Manager</span></h1>
+        <div class="show-task">
+            <h2><span><i class="fa-regular fa-calendar-days"></i></span>All Tasks</h2>
+            <ul class="list">
+                <li><span><i class="fa-regular fa-circle"></i></span>TO Do</li>
+                <li><span><i class="fa-solid fa-arrow-rotate-right"></i></span>In Progress</li>
+                <li><span><i class="fa-solid fa-circle-check"></i></span>Completed</li>
+            </ul>
+            
+        </div>
+        <div class="side-img">
+            <img src="task-manager-img.webp" alt="failed to load">
+            <h3>Stay Organized Efficiently</h3>
+            <p>Manage your tasks with ease and boost your productivity.</p>
+        </div>
+    </div>
+    <div class="task-container">
+        <header>
+            <h1>All Tasks</h1>
+            <div>
+                <button id="add-task-btn" class="showTask"><span><i class="fa-solid fa-plus"></i></span>Add Task</button>
+                <button id="dark-mode-toggle"><span><i class="fa-solid fa-moon"></i></span>Dark Mode</button>
+            </div>
+            
+        </header>
+        
+        <div class="table-wrapper">
+           
+
+       
+        <table class="task-table">
+            <thead>
+                <tr>
+                <th>Task</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="task-list">
+            <tr>
+                <td class="task-heading">Task 1</td>
+                <td>In Progress</td>
+                <td>2023-10-10</td>
+                <td>
+                    <button class="showTask"><span><i class="fa-solid fa-pen"></i></span></button>
+                    <button><span><i class="fa-solid fa-trash"></i></span></button>
+                </td>
+            </tr>
+              <tr>
+                <td class="task-heading">Assignment</td>
+                <td>In Progress</td>
+                <td>2023-10-10</td>
+                <td>
+                    <button class="showTask"><span><i class="fa-solid fa-pen"></i></span></button>
+                    <button><span><i class="fa-solid fa-trash"></i></span></button>
+                </td>
+            </tr>
+              <tr>
+                <td class="task-heading">Javascript</td>
+                <td>In Progress</td>
+                <td>2023-10-10</td>
+                <td>
+                    <button class="showTask"><span><i class="fa-solid fa-pen"></i></span></button>
+                    <button ><span><i class="fa-solid fa-trash"></i></span></button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+         </div>
+        
+    </div>
+   <div class="addTask-container show-container">
+
+    <div class="addTask-header">
+        <div>
+            <h3>Add New Task</h3>
+            <p>Create a new task and keep your work organized.</p>
+        </div>
+
+        <button type="button" class="modal-close close-btn">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+    </div>
+
+    <form id="task-form">
+
+        <div class="form-group">
+            <label for="task-msg">Task</label>
+
+            <div class="input-box">
+                <i class="fa-solid fa-list-check"></i>
+                <input
+                    type="text"
+                    name="task"
+                    id="task-msg"
+                    placeholder="Enter your task..."
+                >
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="task-status">Status</label>
+
+            <div class="input-box">
+                <i class="fa-solid fa-circle-check"></i>
+
+                <select name="status" id="task-status">
+                    <option value="To Do">To Do</option>
+                    <option value="In progress">In Progress</option>
+                    <option value="Completed">Completed</option>
+                </select>
+
+                <i class="fa-solid fa-chevron-down select-arrow"></i>
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            <label for="time">Date</label>
+
+            <div class="input-box">
+                <i class="fa-regular fa-calendar"></i>
+
+                <input
+                    type="date"
+                    name="date"
+                    id="time"
+                >
+            </div>
+        </div>
+
+
+        <div class="form-actions">
+            <button type="button" class="cancel-btn close-btn" >
+                Cancel
+            </button>
+
+            <button type="submit" id="addbtn" class="submit-btn">
+                <i class="fa-solid fa-plus"></i>
+                Add Task
+            </button>
+        </div>
+
+    </form>
+
+</div>
+    
+   </div> 
+    <script src="script.js"></script>
+</body>
+</html>
